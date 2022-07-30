@@ -53,7 +53,7 @@ void run(const vector<MetroStation*>& metroStations) {
         cout << "Longitude: ";
         cin >> longitude;
 
-        for(MetroStation* station : metroStations) {
+        for(auto& station : metroStations) {
             distance = station->calcDistance(latitude, longitude);
             if(distance < shortestDistance){
                 shortestDistance = distance;
