@@ -9,7 +9,6 @@
 using namespace std;
 
 const string METRO_STATIONS_FILE = "./MetroStations.csv";
-constexpr double EARTH_RADIUS = 6371;
 constexpr double CONVERTER = 2156.33;
 
 class MetroStation {
