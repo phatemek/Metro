@@ -16,15 +16,10 @@ public:
     double calcDistance(double x, double y);
 };
 
-MetroStation::MetroStation(string _name, double _latitude, double _longitude) {
-    name = _name;
-    latitude = _latitude;
-    longitude = _longitude;
-}
+MetroStation::MetroStation(string _name, double _latitude, double _longitude)
+    : name(_name), latitude(_latitude), longitude(_longitude) {}
 
-string MetroStation::getName() {
-    return name;
-}
+string MetroStation::getName() { return name; }
 
 double MetroStation::calcDistance(double x, double y) {
     return sqrt(pow((latitude - x), 2) + pow((longitude - y), 2));
@@ -122,7 +117,8 @@ void run(const vector<MetroStation*>& metroStations) {
             }
         }
 
-        cout << "Closest Station: " << closestStation->getName() << endl;
+        cout << "Closest Station: " << closestStation->getName();
+        cout << endl << "**************************************************************" << endl;
     }
 }
 
