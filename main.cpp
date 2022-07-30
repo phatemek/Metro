@@ -42,8 +42,6 @@ vector<MetroStation*> add_locations() {
     return metroStations;
 }
 
-double to_radians( double degree) { return ((M_PI) * degree / 180); }
-
 double MetroStation::calc_distance(double x, double y) {
     return sqrt(pow((latitude - x), 2) + pow((longitude - y), 2));
 }
@@ -78,7 +76,6 @@ void run(const vector<MetroStation*>& metroStations) {
                 closestStation = station;
             }
         }
-
 
         cout << "Closest station: " << closestStation->get_name() << 
                 ", and the approximate time is(if you are walking):" << calc_time(shortestDistance);
