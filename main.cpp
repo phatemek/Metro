@@ -23,7 +23,6 @@ public:
 MetroStation::MetroStation(string _name, double _latitude, double _longitude)
     : name(_name), latitude(_latitude), longitude(_longitude) {}
 
-
 string MetroStation::getName() { return name; }
 
 double MetroStation::calcDistance(double x, double y) {
@@ -66,8 +65,14 @@ void run(const vector<MetroStation*>& metroStations) {
     }
 }
 
+void clean_vector(vector<MetroStation*>& metroStations){
+    for (auto& station : metroStations)
+        delete station;
+}
+
 int main() {
     vector<MetroStation*> metroStations = addLocations();
     run(metroStations);
+    clean_vector(metroStations);
     return 0;
 }
