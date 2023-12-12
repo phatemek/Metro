@@ -4,7 +4,7 @@ to use this app you should have a c++ compiler like g++ or clang or ... <br>
 For instance: <br><br>
 1-
 ```
-g++ main.cpp
+g++ -std=c++17 main.cpp
 ```
 2-
 ```
